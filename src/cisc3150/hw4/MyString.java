@@ -137,7 +137,7 @@ public class MyString implements Cics3150MyString {
 		{
 			tempString = tempString + this.internaValue[i];
 		}
-		return tempString;
+		return tempString.toString();
 	}
 
 

@@ -6,6 +6,8 @@ public class Driver {
 		char[] testValue = new char[] {'T','h','i','s',' ','a','T','e','s','t'};
 		MyString myString = new MyString(testValue);
 		
-		//myString.
+		System.out.println("Character at 3 =" + myString.charAt(3));
+		
+		myString = null;
 	}
 }

@@ -16,9 +16,9 @@ public class MyString implements Cics3150MyString {
 		
 		int len = this.length(); 
 		
-		if (len > 0 && index < len)
+		if (len > 0 && index < len - 1)
 		{
-			return this.internaValue[index];
+			return this.internaValue[index-1];
 		}
 		
 		return new Character('\0');

@@ -3,11 +3,12 @@ package cisc3150.hw4;
 public class MyString implements Cics3150MyString {
 
 	char[] internaValue; 
-	//MyString(char[] chars);
+	MyString compare;
 	
 	public MyString(char[] chars)
 	{
-		this.internaValue = chars;
+		//this.internaValue = chars;
+		copy(chars);
 	}
 	
 	
@@ -43,7 +44,19 @@ public class MyString implements Cics3150MyString {
 
 	@Override
 	public MyString toLowerCase() {
-		// TODO Auto-generated method stub
+		int len = this.length();
+		for (int index = 0;index < len;index++)
+		{
+			int asciiCode = (int)this.internaValue[index];
+			//System.out.println(this.internaValue[index] + "=" + asciiCode);
+			if (asciiCode >= 97 && asciiCode <= 122)
+			{
+				asciiCode = asciiCode - 32;
+			}
+			System.out.println(this.internaValue[index] + "=" + (char)asciiCode);			
+			
+		}
+		
 		return null;
 	}
 
@@ -54,19 +67,53 @@ public class MyString implements Cics3150MyString {
 	}
 
 	@Override
-	public boolean equals(MyString s) {
+	public boolean equals(MyString compare) {
 		// TODO Auto-generated method stub
-		return false;
+		boolean areEqual = false;
+		
+		int len = this.length();
+		
+		if (compare == null) 
+			areEqual = false;
+		
+		if (len != compare.internaValue.length )
+			areEqual = false;
+		
+		for (int i=0;i < len;i++)
+		{
+			if (this.internaValue[i] != compare.internaValue[i])
+				return areEqual;
+		}
+			
+		return true;
 	}
 
 	@Override
 	public MyString getMyString() {
 		// TODO Auto-generated method stub
-		return null;
+		return this;
 	}
 	private int checkLength()
 	{
 		return this.internaValue.length;
 	}
+	private void copy(char[] chars)
+	{
+		this.internaValue = chars.clone();
+		//for (int i=0;i < chars.length;i++)
+		//{
+		//	
+		//}
+	}
+	public String toString()
+	{
+		String tempString = new String();
+		for (int i=0;i < this.internaValue.length;i++)
+		{
+			tempString = tempString + this.internaValue[i];
+		}
+		return tempString;
+	}
+	
 
 }

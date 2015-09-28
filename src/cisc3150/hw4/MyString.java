@@ -107,9 +107,16 @@ public class MyString implements Cics3150MyString {
 	}
 
 	@Override
-	public MyString getMyString() {
+	public MyString getMyString() 
+	{
+		MyString myString = new MyString(new char[this.length()]);
 		// TODO Auto-generated method stub
-		return this;
+		myString.setMyString(this.internaValue);
+		return myString;
+	}
+	public void setMyString(char[] value)
+	{
+		this.internaValue = value.clone();
 	}
 	private int checkLength()
 	{
@@ -132,13 +139,6 @@ public class MyString implements Cics3150MyString {
 		}
 		return tempString;
 	}
-	public void setValue(char[] value)
-	{
-		this.internaValue = value.clone();
-	}
-	public char[] getValue()
-	{
-		return this.internaValue;
-	}
+
 
 }

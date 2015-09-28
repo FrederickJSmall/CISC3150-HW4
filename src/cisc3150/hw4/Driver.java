@@ -9,13 +9,16 @@ public class Driver {
 		MyString compareString = new MyString(compareValue);
 		MyString compareAgainString = new MyString(testValue);
 		
-		System.out.println("Character at position 3=" + myString.charAt(3));
-		System.out.println("Length =" + myString.length());
-		System.out.println("ToLowerLength =" + myString.toLowerCase());
+		System.out.println("Character at position 3 \t=" + myString.charAt(3));
+		System.out.println("Length \t\t\t\t=" + myString.length());
+		System.out.println("ToLowerLength \t\t\t=" + myString.toLowerCase());
 
-		System.out.println("Equals =" + myString.equals(compareString));
-		System.out.println("Equals =" + myString.equals(compareAgainString));		
-		//System.out.println("ToLowerLength =" + myString.toLowerCase().toString());
+		System.out.println("Equals \t\t\t\t=" + myString.equals(compareString));
+		System.out.println("Equals \t\t\t\t=" + myString.equals(compareAgainString));		
+		System.out.println("To Upper Case \t\t\t=" + myString.toUpperCase().toString());
+		System.out.println("To Lower Case \t\t\t=" + myString.toLowerCase().toString());
+		
+		System.out.println("Original Value \t\t\t=" + myString.toString());
 		//System.out.println("ToString =" + myString.toUpperCase().toString());		
 		myString = null;
 	}

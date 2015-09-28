@@ -61,27 +61,35 @@ public class MyString implements Cics3150MyString {
 	}
 
 	@Override
-	public MyString toLowerCase() {
+	public MyString toUpperCase() {
+		MyString myString = new MyString(new char[this.length()]);
 		int len = this.length();
 		for (int index = 0;index < len;index++)
 		{
 			int asciiCode = (int)this.internaValue[index];
-			//System.out.println(this.internaValue[index] + "=" + asciiCode);
 			if (asciiCode >= 97 && asciiCode <= 122)
 			{
 				asciiCode = asciiCode - 32;
 			}
-			System.out.println(this.internaValue[index] + "=" + (char)asciiCode);			
-			
+			myString.internaValue[index] = (char)asciiCode;
 		}
-		
-		return null;
+		return myString;
 	}
 
 	@Override
-	public MyString toUpperCase() {
-		// TODO Auto-generated method stub
-		return null;
+	public MyString toLowerCase() {
+		MyString myString = new MyString(new char[this.length()]);
+		int len = this.length();
+		for (int index = 0;index < len;index++)
+		{
+			int asciiCode = (int)this.internaValue[index];
+			if (asciiCode >= 65 && asciiCode <= 90)
+			{
+				asciiCode = asciiCode + 32;
+			}
+			myString.internaValue[index] = (char)asciiCode;
+		}
+		return myString;
 	}
 
 	@Override
@@ -110,7 +118,6 @@ public class MyString implements Cics3150MyString {
 	public MyString getMyString() 
 	{
 		MyString myString = new MyString(new char[this.length()]);
-		// TODO Auto-generated method stub
 		myString.setMyString(this.internaValue);
 		return myString;
 	}
@@ -118,17 +125,13 @@ public class MyString implements Cics3150MyString {
 	{
 		this.internaValue = value.clone();
 	}
-	private int checkLength()
+	private int getLength()
 	{
 		return this.internaValue.length;
 	}
 	private void copy(char[] chars)
 	{
 		this.internaValue = chars.clone();
-		//for (int i=0;i < chars.length;i++)
-		//{
-		//	
-		//}
 	}
 	public String toString()
 	{

@@ -132,6 +132,13 @@ public class MyString implements Cics3150MyString {
 		}
 		return tempString;
 	}
-	
+	public void setValue(char[] value)
+	{
+		this.internaValue = value.clone();
+	}
+	public char[] getValue()
+	{
+		return this.internaValue;
+	}
 
 }

@@ -2,6 +2,7 @@ package cisc3150.hw4;
 
 public class MyString implements Cics3150MyString {
 
+	private static char[] internaValuePrivate; 
 	char[] internaValue; 
 	MyString compare;
 	
@@ -126,14 +127,16 @@ public class MyString implements Cics3150MyString {
 	public void setMyString(char[] value)
 	{
 		this.internaValue = value.clone();
+		MyString.internaValuePrivate= value.clone();
 	}
-	private int getLength()
-	{
-		return this.internaValue.length;
-	}
+	//private int getLength()
+	//{
+	//	return this.internaValue.length;
+	//}
 	private void copy(char[] chars)
 	{
 		this.internaValue = chars.clone();
+		MyString.internaValuePrivate= chars.clone();
 	}
 	public String toString()
 	{
@@ -144,6 +147,14 @@ public class MyString implements Cics3150MyString {
 		}
 		return tempString.toString();
 	}
-
+	public static MyString valueOf(int i)
+	{
+		MyString myString = new MyString(new char[1]);
+		
+		char[] value = new char[] {MyString.internaValuePrivate[i]};
+				
+		myString.setMyString(value);
+		return myString;
+	}
 
 }

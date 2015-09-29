@@ -39,25 +39,27 @@ public class MyString implements Cics3150MyString {
 	@Override
 	public MyString substring(int begin, int end) {
 		// TODO Auto-generated method stub
+		//begin--;
+		//end--;
 		MyString myStrng = new MyString(new char[this.length()]);
 		
-		if (end > begin)
+		if (end < begin)
 			return null;
 		
 		int len = this.length()-1;
 		if (begin > len || end > len)
 			return null;
 		
-		char[] tempChar = new char[end - begin];
+		char[] tempChar = new char[(end - begin)+1];
 		int index=0;
-		for (int i = begin;i < end;i++)
+		for (int i = begin;i <= end;i++)
 		{
 			tempChar[index] = this.internaValue[i];
 			index++;
 		}
 		
-		
-		return null;
+		myStrng.setMyString(tempChar);
+		return myStrng;
 	}
 
 	@Override

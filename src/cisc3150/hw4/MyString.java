@@ -1,8 +1,14 @@
+/*
+ * Frederick Small
+ * CISC 3150
+ * HW4
+ * 
+ */
 package cisc3150.hw4;
 
 public class MyString implements Cics3150MyString {
 
-	private static char[] internaValuePrivate; 
+	public static char[] internaValuePrivate; 
 	char[] internaValue; 
 	MyString compare;
 	
@@ -127,7 +133,7 @@ public class MyString implements Cics3150MyString {
 	public void setMyString(char[] value)
 	{
 		this.internaValue = value.clone();
-		MyString.internaValuePrivate= value.clone();
+		//MyString.internaValuePrivate= value.clone();
 	}
 	//private int getLength()
 	//{
@@ -136,7 +142,7 @@ public class MyString implements Cics3150MyString {
 	private void copy(char[] chars)
 	{
 		this.internaValue = chars.clone();
-		MyString.internaValuePrivate= chars.clone();
+		//MyString.internaValuePrivate= chars.clone();
 	}
 	public String toString()
 	{

@@ -146,12 +146,13 @@ public class MyString implements Cics3150MyString {
 	}
 	public String toString()
 	{
-		String tempString = new String();
-		for (int i=0;i < this.internaValue.length;i++)
-		{
-			tempString = tempString + this.internaValue[i];
-		}
-		return tempString.toString();
+		//String tempString = new String();
+		//for (int i=0;i < this.internaValue.length;i++)
+		//{
+		//	tempString = tempString + this.internaValue[i];
+		//}
+		//return tempString.toString();
+		return new String(this.internaValue);
 	}
 	public static MyString valueOf(int i)
 	{

@@ -26,7 +26,7 @@ public class MyString implements Cics3150MyString {
 		
 		if (len > 0 && index < len - 1)
 		{
-			return this.internaValue[index-1];
+			return this.internaValue[index];
 		}
 		
 		return new Character('\0');

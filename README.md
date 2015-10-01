@@ -2,7 +2,9 @@
 Homework 4
 
 Instructions for compiling and running package
+
 javac -d "Test" "Cics3150MyString.java" "MyString.java" "Driver.java"
+
 java -classpath "Test" cisc3150.hw4.Driver
 
 

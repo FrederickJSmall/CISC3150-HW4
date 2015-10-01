@@ -1,0 +1,22 @@
+D:\Projects\GitHub\BrooklynCollege\CISC3150\HW4\src\cisc3150\hw4>javac -d "Test"
+ "D:\Projects\GitHub\BrooklynCollege\CISC3150\HW4\src\cisc3150\hw4\Cics3150MyStr
+ing.java" "D:\Projects\GitHub\BrooklynCollege\CISC3150\HW4\src\cisc3150\hw4\MySt
+ring.java" "D:\Projects\GitHub\BrooklynCollege\CISC3150\HW4\src\cisc3150\hw4\Dri
+ver.java"
+
+D:\Projects\GitHub\BrooklynCollege\CISC3150\HW4\src\cisc3150\hw4>java -classpath
+ "Test" cisc3150.hw4.Driver
+Starting Value                          This a Test
+Static Value reference                  [C@2a139a55
+**************
+Character at position 3                 =s
+Length                                  =11
+Substring 4,9                           = a Tes
+To Lower Case                           =this a test
+To Upper Case                           =THIS A TEST
+Starting Value Equals(This a TXXX)      =false
+Starting Value Equals(This a Test)      =true
+Get My String                           =This a Test
+Value of 4                              =S
+**************
+Ending Value                            This a Test
